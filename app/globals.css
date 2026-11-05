@@ -1,10 +1,14 @@
-
 @import "tailwindcss";
 
 :root {
   --maroon: #800000;
   --cream: #fffaf2;
   --gold: #d9a441;
+}
+
+@theme inline {
+  --font-sans: var(--font-body), "Segoe UI", sans-serif;
+  --font-serif: var(--font-display), Georgia, serif;
 }
 
 * {
@@ -16,7 +20,6 @@ body {
   margin: 0;
   background: var(--cream);
   color: #3c2118;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 button,
@@ -31,4 +34,146 @@ button {
 ::selection {
   background: #800000;
   color: white;
+}
+
+/* Hero entrance */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-zoom {
+  from {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes soft-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 14px 32px rgba(37, 211, 102, 0.5);
+  }
+}
+
+.hero-image {
+  animation: hero-zoom 10s ease-out forwards;
+}
+
+@keyframes ring-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes showcase-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.hero-showcase {
+  animation: showcase-float 5.5s ease-in-out infinite;
+}
+
+.hero-ring-spin {
+  animation: ring-spin 28s linear infinite;
+}
+
+.hero-animate {
+  opacity: 0;
+  animation: fade-up 0.85s ease forwards;
+}
+
+.hero-delay-1 {
+  animation-delay: 0.12s;
+}
+
+.hero-delay-2 {
+  animation-delay: 0.28s;
+}
+
+.hero-delay-3 {
+  animation-delay: 0.44s;
+}
+
+.hero-delay-4 {
+  animation-delay: 0.6s;
+}
+
+.hero-delay-5 {
+  animation-delay: 0.76s;
+}
+
+@keyframes label-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-slide-label {
+  animation: label-fade 0.45s ease;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp-float {
+  animation: soft-pulse 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-animate,
+  .hero-showcase,
+  .hero-ring-spin,
+  .whatsapp-float {
+    animation: none;
+  }
+
+  .hero-animate {
+    opacity: 1;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
