@@ -16,15 +16,15 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#eadfce] bg-[#fffaf2]/95 backdrop-blur">
-      <div className="mx-auto flex h-[78px] max-w-[1400px] items-center justify-between px-5 lg:px-9">
+      <div className="mx-auto flex h-[96px] max-w-[1400px] items-center justify-between px-5 lg:px-9">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.jpeg"
-            alt="Nityana Premium Dry Fruits"
-            width={180}
-            height={65}
+            src="/images/logo-nit.png"
+            alt="Nitanya Premium Dry Fruits"
+            width={260}
+            height={96}
             priority
-            className="h-[48px] w-auto object-contain sm:h-[60px]"
+            className="h-[72px] w-auto object-contain sm:h-[84px]"
           />
         </Link>
 

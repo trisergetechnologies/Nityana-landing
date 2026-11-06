@@ -25,7 +25,7 @@ const heroSlides = [
   },
   {
     name: "Premium Makhana",
-    image: "/images/makhana.jpeg",
+    image: "/images/mairi-makhana.jpeg",
     label: "Premium Makhana",
   },
   {
@@ -59,7 +59,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -right-24 top-16 h-72 w-72 rounded-full bg-[#d9a441]/15 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[#800000]/08 blur-3xl" />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-78px)] max-w-[1400px] items-center gap-10 px-6 py-12 lg:grid-cols-[1fr_1.05fr] lg:gap-8 lg:px-11 lg:py-16">
+      <div className="relative mx-auto grid min-h-[calc(100vh-96px)] max-w-[1400px] items-center gap-10 px-6 py-12 lg:grid-cols-[1fr_1.05fr] lg:gap-8 lg:px-11 lg:py-16">
         {/* Left — brand + description */}
         <div className="relative z-10 order-2 max-w-[560px] lg:order-1">
           <div className="hero-animate hero-delay-1 mb-5 flex items-center gap-3">
@@ -70,7 +70,7 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-animate hero-delay-2 font-serif text-5xl font-semibold leading-[1.02] tracking-tight text-[#4a160f] sm:text-6xl md:text-7xl">
-            Nityana
+            Nitanya
           </h1>
 
           <p className="hero-animate hero-delay-3 mt-4 font-serif text-2xl font-medium leading-snug text-[#800000] sm:text-3xl">
@@ -105,36 +105,16 @@ export default function Hero() {
         {/* Right — stylish premium product showcase */}
         <div className="relative order-1 mx-auto w-full max-w-[560px] lg:order-2 lg:max-w-none">
           <div className="hero-showcase relative mx-auto aspect-square max-w-[520px]">
-            {/* Ambient glow */}
-            <div className="pointer-events-none absolute inset-[8%] rounded-full bg-[radial-gradient(circle,#f4d48a_0%,transparent_68%)] opacity-70 blur-2xl" />
-            <div className="pointer-events-none absolute inset-[18%] rounded-full bg-[#800000]/10 blur-3xl" />
+            <div className="pointer-events-none absolute inset-[12%] rounded-full bg-[radial-gradient(circle,#f4d48a_0%,transparent_68%)] opacity-50 blur-3xl" />
 
-            {/* Outer gold ring */}
-            <div className="hero-ring pointer-events-none absolute inset-[4%] rounded-full border border-[#d9a441]/35" />
-            <div className="hero-ring-spin pointer-events-none absolute inset-[2%] rounded-full border border-dashed border-[#d9a441]/40" />
-
-            {/* Decorative arcs */}
-            <div className="pointer-events-none absolute inset-[10%] rounded-full border-[3px] border-[#800000]/10" />
-            <div className="pointer-events-none absolute -inset-1 rounded-full bg-[conic-gradient(from_180deg,transparent_0deg,#d9a44155_40deg,transparent_90deg,transparent_180deg,#80000033_230deg,transparent_280deg)] opacity-60 blur-[1px]" />
-
-            {/* Main framed stage */}
-            <div className="absolute inset-[12%] overflow-hidden rounded-[2rem] border border-[#d9a441]/50 bg-gradient-to-br from-[#fffaf2]/90 via-[#f4e6d2]/75 to-[#e8d2b4]/85 shadow-[0_25px_60px_rgba(74,22,15,0.18),inset_0_1px_0_rgba(255,255,255,0.65)] backdrop-blur-[2px] sm:rounded-[2.5rem]">
-              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.55),transparent_45%)]" />
-              <div className="pointer-events-none absolute inset-3 rounded-[1.6rem] border border-white/40 sm:rounded-[2rem]" />
-
-              {/* Corner ornaments */}
-              <span className="pointer-events-none absolute left-4 top-4 h-8 w-8 border-l-2 border-t-2 border-[#d9a441]" />
-              <span className="pointer-events-none absolute right-4 top-4 h-8 w-8 border-r-2 border-t-2 border-[#d9a441]" />
-              <span className="pointer-events-none absolute bottom-4 left-4 h-8 w-8 border-b-2 border-l-2 border-[#d9a441]" />
-              <span className="pointer-events-none absolute bottom-4 right-4 h-8 w-8 border-b-2 border-r-2 border-[#d9a441]" />
-
+            <div className="absolute inset-0 overflow-hidden rounded-[1.5rem]">
               {heroSlides.map((item, index) => (
                 <div
                   key={item.image}
-                  className={`absolute inset-0 p-8 transition-all duration-700 ease-out sm:p-10 ${
+                  className={`absolute inset-0 transition-all duration-700 ease-out ${
                     index === active
-                      ? "translate-y-0 scale-100 opacity-100"
-                      : "translate-y-4 scale-95 opacity-0"
+                      ? "scale-100 opacity-100"
+                      : "scale-105 opacity-0"
                   }`}
                 >
                   <Image
@@ -142,15 +122,14 @@ export default function Hero() {
                     alt={item.name}
                     fill
                     priority={index === 0}
-                    className="object-contain drop-shadow-[0_20px_35px_rgba(60,33,24,0.28)]"
-                    sizes="(max-width: 1024px) 85vw, 480px"
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 90vw, 520px"
                   />
                 </div>
               ))}
             </div>
 
-            {/* Soft floor shadow */}
-            <div className="pointer-events-none absolute bottom-2 left-1/2 h-10 w-[58%] -translate-x-1/2 rounded-[100%] bg-[#3c2118]/20 blur-2xl" />
+            <div className="pointer-events-none absolute bottom-0 left-1/2 h-10 w-[58%] -translate-x-1/2 rounded-[100%] bg-[#3c2118]/18 blur-2xl" />
           </div>
 
           <div className="mt-6 flex flex-col items-center gap-4">

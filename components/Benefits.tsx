@@ -36,7 +36,7 @@ export default function Benefits() {
 
         <div>
           <h2 className="mb-7 font-serif text-3xl font-bold text-[#800000]">
-            Why Choose Nityana?
+            Why Choose Nitanya?
           </h2>
 
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">

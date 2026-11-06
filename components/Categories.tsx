@@ -9,7 +9,7 @@ const categories = [
   },
   {
     name: "Makhana",
-    image: "/images/makhana.jpeg",
+    image: "/images/mairi-makhana.jpeg",
   },
   {
     name: "Walnuts",

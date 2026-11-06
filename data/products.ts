@@ -60,7 +60,7 @@ export const products: Product[] = [
     name: "Premium Makhana",
     description:
       "Light, roasted fox nuts — a guilt-free crunchy snack for all ages.",
-    image: "/images/makhana.jpeg",
+    image: "/images/mairi-makhana.jpeg",
     category: "Makhana",
   },
   {
@@ -174,7 +174,7 @@ export const WHATSAPP_NUMBER = "919876543210";
 
 export function whatsappGeneralLink() {
   const text = encodeURIComponent(
-    "Hi, I'd like to know more about Nityana premium dry fruits.",
+    "Hi, I'd like to know more about Nitanya premium dry fruits.",
   );
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
 }
